@@ -1,0 +1,63 @@
+﻿### Графическая оболочка ###
+
+### dwm ###
+install dwm: sudo apt install dwm suckless-tools xdm dmenu xorg && sudo apt-get install git xorg libx11-dev libxft-dev libxinerama-dev xdm suckless-tools dmenu && git clone https://git.suckless.org/dwm
+### i3-wm ##
+install i3: i3, i3status, x-window-system)
+### XFCE4 ###
+xfce4 xfce4-goodies
+### ---- ###
+
+
+### Ставить ###
+vim
+vim-gtk #для подержки системного буфура обмена
+sudo
+adduser username sudo (добавляем пользователя в группу суперпользователей)
+openssh-server
+firefox-esr
+(Конфиг храниться по адрессу /home/q/.farefox/farefox
+apt libreoffice libreoffice-l10n-ru
+apt install qbittorrent
+для работы wi-fi нужно добавить репозиторий
+deb http://ftp.de.debian.org/debian stretch main non-free
+apt install firmware-realtek (после установки драйвера на wi-fi, можно убрать репозиторий из списка)
+apt install network-manager network-manager-gnome
+vim /etc/NetworkManager/NetworkManager.conf и в строке manager поменять false на true
+apt install atril (просмоторщик pdf файлов)
+apt inatall wget
+apt install qemu-kvm libvirt-daemon-system virt-manager(Добавить пользователя в группу libvirt)
+keepassxc
+curl
+git
+tmux
+    $vim ~/.tmux.conf
+        set-option -g prefix C-q
+        set -g mouse on
+htop
+bash-completion
+VSCodium
+	wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/etc/apt/trusted.gpg.d/vscodium.gpg 
+	echo 'deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list 
+	sudo apt update && sudo apt install codium 
+vlc
+
+
+
+### Доп софт ### 
+apt install bluez blueman (Настройки блитуза)
+net-tools (Не разу не пользовался с момента установки)
+apt install gparted
+bridge-utils (пакет для создания бриджей, iptables2 хватает за глаза, можно не ставить)
+arping	(работает так же как команда ping но озращает MAC-address)
+mat2	(просмотр и удаление методанных с файлов)
+traceroute
+wireshark
+macchanger
+secure-delete
+nmap
+dnsutils (сомнительный пакет, команды host хватает за глаза)
+whois
+logisim (программка для создания микросхем)
+gdb (дебагер)
+с оф сайта скачать Vera-crypt
