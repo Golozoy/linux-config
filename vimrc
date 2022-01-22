@@ -31,8 +31,23 @@ nmap <C-h> <C-W>h
 nmap <C-l> <C-W>l
 
 "выполнение текущего файла
-nmap <f5> :!python3 %<cr>
+"nmap <f5> :!python3 %<cr>
 nmap <f4> :!bash %<cr>
+" run current script with python3 by CTRL+R in command and insert mode
+autocmd FileType python map <buffer> <C-r> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <C-r> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
+
+" Буфер
+map gn :bn<cr>
+map gp :bp<cr>
+map gw :Bclose<cr>
+
+" Выключить подсветку результатов поиска
+nnoremap ,<space> :nohlsearch<CR>
+
+
+
 
 " Настройки табов для Python, согласно рекоммендациям
 set tabstop=4   "количество пробелов в 
@@ -45,11 +60,15 @@ set softtabstop=4 "4 пробела в табе
 set hlsearch
 set incsearch
 
+"статус бар
+set laststatus=2
+
 "colorscheme industry
 colorscheme OceanicNext
 
 " Автоотступ
 set autoindent
+set scrolloff=7
 
 " Подсвечиваем все что можно подсвечивать
 let python_highlight_all = 1
@@ -69,13 +88,17 @@ syntax on "Включить подсветку синтаксиса
 set wrap
 set linebreak
 
-set nu "relativenumber
+set nu
+set rnu "relativenumber
 set ruler "включаем ruler, в строке состояния
 set mousehide "Спрятать курсор мыши когда набираем текст
+set mouse=a
 set termencoding=utf-8 "Кодировка терминала
 set encoding=utf-8
 set fileencodings=utf8,cp1251
+set noswapfile
 
 "подсветка колонки и строки курсора
 set cursorcolumn
 set cursorline
+set colorcolumn=79 " Линия ограничения длины строки

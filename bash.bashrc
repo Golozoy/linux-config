@@ -18,7 +18,7 @@ fi
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
 # but only if not SUDOing and have SUDO_PS1 set; then assume smart user.
 if ! [ -n "${SUDO_USER}" -a -n "${SUDO_PS1}" ]; then
-  PS1='${debian_chroot:+($debian_chroot)}\[\033[1;31m\]⦗\[\033[0m\]\[\033[1;34m\]\u\[\033[0m\]\[\033[1;33m\]@\[\033[0m\]\[\033[1;37m\]\h\[\033[0m\]\[\033[1;31m\]⦘–⦗\[\033[0m\]\[\033[0;32m\]\w\[\033[0m\]\[\033[1;31m\]⦘⮞\[\033[0m\] \[\033[1;35m\]\$ \[\033[0m\]'
+  PS1='${debian_chroot:+($debian_chroot)}\[\e[1;31m\]⦗\[\e[1;34m\]\u\[\e[1;33m\]@\[\e[1;37m\]\h\[\e[1;31m\]⦘–⦗\[\e[0;32m\]\w\[\e[1;31m\]⦘\n\[\e[1;31m\]⦗\[\e[0;32m\]\t\[\e[1;31m\]⦘\[\e[1;31m\]⮞ \[\e[1;35m\]\$ \[\e[0m\]'
 fi
 
 # Commented out, don't overwrite xterm -T "title" -n "icontitle" by default.
