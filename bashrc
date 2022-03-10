@@ -79,8 +79,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
     
-    alias discord='/opt/Discord/Discord'
     alias cpgitignore='cp ~/documents/linux_config/gitignore ./.gitignore'
+
+    alias venvrun='source $(find . -name activate)'
 
 fi
 
