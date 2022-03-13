@@ -1,0 +1,41 @@
+### My block ###
+
+## PS1
+
+# debian - red
+#PS1='\[\e[1;31m\]⦗\[\e[1;34m\]\u\[\e[1;33m\]@\[\e[1;37m\]\h\[\e[1;31m\]⦘–⦗\[\e[0;32m\]\w\[\e[1;31m\]⦘\n\[\e[1;31m\]⦗\[\e[0;32m\]\t\[\e[1;31m\]⦘\[\e[1;31m\]⮞ \[\e[1;35m\]\$ \[\e[0m\]'
+# monjaro
+#PS1='\[\e[1;32m\][\u@\h]–[\[\e[1;36m\]\w\[\e[1;32m\]]\n[\[\e[1;36m\]\t\[\e[1;32m\]]\$ \[\e[0m\]'
+
+## Alias
+
+# Color ip
+export COLORFGBG='2'
+alias ip='ip -c'
+
+alias ls='ls --color=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias ll='ls -l'
+alias la='ls -A'
+
+alias cpgitignore='cp ~/documents/linux_config/gitignore ./.gitignore'
+
+alias venvrun='source $(find . -name activate)'
+
+##Functions
+
+function set-title(){
+  if [[ -z "$ORIG" ]]; then
+      ORIG=$PS1
+  fi
+  TITLE="\[\e]2;$*\a\]"
+  PS1=${ORIG}${TITLE}
+}
+
+###end block###
