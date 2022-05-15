@@ -132,6 +132,10 @@ alias cpgitignore='cp ~/documents/linux-config/gitignore ./.gitignore'
 
 alias venvrun='source $(find . -name activate)'
 
+alias icat="kitty +kitten icat"
+
+alias kdiff="kitty +kitten diff"
+
 ##Functions
 
 function set-title(){
@@ -141,6 +145,10 @@ function set-title(){
   TITLE="\[\e]2;$*\a\]"
   PS1=${ORIG}${TITLE}
 }
+
+###env###
+
+export PATH=$PATH:~/code/my_scripts
 
 ###direnv###
 
