@@ -1,13 +1,11 @@
 ﻿### Графическая оболочка ###
 
-### dwm ###
-install dwm: sudo apt install dwm suckless-tools xdm dmenu xorg && sudo apt-get install git xorg libx11-dev libxft-dev libxinerama-dev xdm suckless-tools dmenu && git clone https://git.suckless.org/dwm
-### i3-wm ##
-install i3: i3, i3status, x-window-system)
 ### XFCE4 ###
 xfce4 xfce4-goodies
 ### ---- ###
 
+#tirring
+picom
 
 ### Ставить ###
 vim
