@@ -3,7 +3,6 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'mhartington/oceanic-next'
 
 call plug#end()
@@ -17,11 +16,6 @@ autocmd FileType python set omnifunc=python3complete#Complete
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd Filetype cpp set omnifunc=cppcomplete#CompleteCPP
-
-
-"mappings it is a plugin
-
-nmap <C-n> :NERDTreeToggle<CR>
 
 "my mapping keys
 
@@ -37,7 +31,6 @@ nmap <f4> :!bash %<cr>
 autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
-
 " Буфер
 map gn :bn<cr>
 map gp :bp<cr>
@@ -45,9 +38,6 @@ map gw :Bclose<cr>
 
 " Выключить подсветку результатов поиска
 nnoremap ,<space> :nohlsearch<CR>
-
-
-
 
 " Настройки табов для Python, согласно рекоммендациям
 set tabstop=4   "количество пробелов в 
