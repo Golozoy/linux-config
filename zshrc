@@ -11,7 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="custom"
+ZSH_THEME="aussiegeek"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -136,6 +136,8 @@ alias icat="kitty +kitten icat"
 
 alias kdiff="kitty +kitten diff"
 
+alias rsync="rsync -zavhHlc --progress"
+
 ##Functions
 
 function set-title(){
@@ -155,3 +157,7 @@ export PATH=$PATH:~/code/my_scripts
 eval "$(direnv hook zsh)"
 
 ###end block###
+[[ /usr/bin/kubectl ]] && source <(kubectl completion zsh)
+alias k=kubectl
+export MVN_USERNAME=lupachev
+export MVN_PASSWORD={PcYqbiIcOVUHqrGggdTWAXOzO/VA1X7fKi6K7MSac0DbW8MUxB1fj8NI3I5iaZFX}
